@@ -9,22 +9,24 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
+    robot.hear /(遅刻|遅れます|寝坊)/i, (msg) ->
+        msg.send "今、僕はスタートバーン社員と闘っています。社会人として基礎中の基礎である時間を守るということですら、既に維持することが出来なくなっている。周辺の奴らにしても、「あの人はいつもそんな感じだから、まあしょうがないだろう」とこのような異常事態を当然の事であるが如く受け入れ、弛みきったなあなあの空気が蔓延している。だが、待て。雇用されている人々よ。サーヴィスを提供せずに糧を食むことが出来るとでも思っているのか? ●納期を守れ。何が何でも！●クオリティーを上げろ！百歩譲って現状以下にはするな！これ、鉄則だろ。なぜ、それができない？また、会社のルールを守れないのはなぜか？毎日の予定表の作成と自分の机の上への張り込みは私が創りだしたルールだ。必ず遵守せよ。"
 
-  # robot.hear /badger/i, (res) ->
-  #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
-  # robot.respond /open the (.*) doors/i, (res) ->
-  #   doorType = res.match[1]
-  #   if doorType is "pod bay"
-  #     res.reply "I'm afraid I can't let you do that."
-  #   else
-  #     res.reply "Opening #{doorType} doors"
-  #
-  # robot.hear /I like pie/i, (res) ->
-  #   res.emote "makes a freshly baked pie"
-  #
-  # lulz = ['lol', 'rofl', 'lmao']
-  #
+
+# robot.hear /badger/i, (res) ->
+#      res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+#
+#  robot.respond /open the (.*) doors/i, (res) ->
+#  doorType = res.match[1]
+#  if doorType is "pod bay"
+#  res.reply "I'm afraid I can't let you do that."
+#  else
+#    res.reply "Opening {doorType} doors"
+#    robot.hear /I like pie/i, (res) ->
+#      res.emote "makes a freshly baked pie"
+
+
+ #   lulz = ['lol', 'rofl', 'lmao']
   # robot.respond /lulz/i, (res) ->
   #   res.send res.random lulz
   #
