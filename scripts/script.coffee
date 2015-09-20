@@ -31,7 +31,7 @@ module.exports = (robot) ->
         else if n > 70 and n <= 80
             msg.send "はい。"
         else if n > 80 and n <= 90
-            msg.send "毎日の作業だからと言って適当な予定表を出すなよ、不快だ。"
+            msg.send "おまえ、なんで適当な予定表を出すんだよ、信用出来ない。"
         else
             msg.send "死ぬ気でやれ！"
 
