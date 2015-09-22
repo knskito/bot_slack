@@ -47,8 +47,27 @@ module.exports = (robot) ->
         else
             msg.send "死ぬ気でやれ！"
 
+    robot.hear /(村上|隆|takashipom)/, (msg) ->
+        n = Math.floor(Math.random() * 100) + 1
+        if n <= 20
+            msg.send "なんだおめ。突然人の名前出して知った風な口ききやがって。"
+        else if n > 20 and n <= 40
+            msg.send "自意識過剰な日本の若者の適当発言に耳を傾ける価値無し！"
+        else if n > 40 and n <= 60
+            msg.send "当事者意識も無く、発言に責任を取る訳でもなく、外から偉そうにあれこれ語る自称批評家やキュレーター達のなんと多いことか。日本アートシーンの病理病巣が垣間見えますね。"
+        else if n > 60 and n <= 80
+            msg.send "なんでも良いけど、言いたいことがあるならまず自分から名乗るのが礼儀ってもんだろ。"
+        else
+            msg.send "ははは。相変わらず国内では嫌われてるなぁ、わし。"
+
+    robot.hear /(黒瀬|東浩紀|カオスラウンジ|pixiv|岩渕|チームラボ|猪子|ピクシブ|片桐)/, (msg) ->
+        msg.send "色々と面倒見てやったにも関わらず、仁義も切らず偉そうに業界者面しているああ言う輩を、私は強く嫌悪しております。"
+
     robot.hear /1984/, (msg) ->
-        msg.send "I am now, watching YOU! <●> <●>"
+        msg.send "I am now, watching YOU! <◉> <◉>"
+
+    robot.hear /1Q84/, (msg) ->
+        msg.send "The most famous Murakami in the world is not Haruki, but me."
 
     robot.hear /watchmen/, (msg) ->
         msg.send "Who watches the WATCHMEN?"
