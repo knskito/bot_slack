@@ -39,16 +39,16 @@ module.exports = (robot) ->
 
     robot.hear /(本日の作業予定)/, (msg) ->
         arr = ["しっかりやれよ。", "頑張ってね！", "おつかれさんです。", "いつもありがとう。", "ご苦労様。", "Otsukare yama desu.", "よろしくお願いします。", "はい。", "おまえ、なんで適当な予定表を出すんだよ、信用出来ない。", "死ぬ気でやれ！"]
-        cont = Math.floor(Math.random() * arr.length) + 1
+        cont = Math.floor(Math.random() * arr.length)
         msg.send arr[cont]
 
     robot.hear /(村上|隆|takashipom)/, (msg) ->
-        arr = ["なんだおめ。突然人の名前出して知った風な口ききやがって。", "自意識過剰な日本の若者の適当発言に耳を傾ける価値無し！", "当事者意識も無く、発言に責任を取る訳でもなく、外から偉そうにあれこれ語る自称批評家やキュレーター達のなんと多いことか。日本アートシーンの病理病巣が垣間見えますね。", "なんでも良いけど、言いたいことがあるならまず自分から名乗るのが礼儀ってもんだろ。", "ははは。相変わらず国内では嫌われてるなぁ、わし。", "いつコソコソとわしの悪口ご苦労さまです！"]
-        cont = Math.floor(Math.random() * arr.length) + 1
+        arr = ["なんだおめ。突然人の名前出して知った風な口ききやがって。", "お前みたいな自意識過剰な若者の適当発言に耳を傾ける価値無し！", "当事者意識も無く、発言に責任を負う訳でもなく、外から偉そうにあれこれ語る自称批評家やキュレーター達のなんと多いことか。こういった発言からも日本アートシーンの病理病巣が垣間見えますね。", "なんでも良いけど、言いたいことがあるならまず自分から名乗るのが礼儀ってもんだろ。", "ははは。相変わらず国内では嫌われてるなぁ、わし。", "いつコソコソとわしの悪口ご苦労さまです！"]
+        cont = Math.floor(Math.random() * arr.length)
         msg.send arr[cont]
 
     robot.hear /(黒瀬|東浩紀|カオスラウンジ|pixiv|岩渕|チームラボ|猪子|ピクシブ|片桐)/, (msg) ->
-        msg.send "色々と面倒見てやったにも関わらず、仁義も切らず偉そうに業界者面しているああ言う輩を、私は強く嫌悪しとります。"
+        msg.send "色々と面倒見てやったにも関わらず、仁義も切らず偉そうに業界者面しているああ言う輩を、私は強く嫌悪しております。"
 
     robot.hear /1984/, (msg) ->
         msg.send "I am now, watching YOU! <◉> <◉>"
@@ -63,7 +63,7 @@ module.exports = (robot) ->
         msg.send "BONUS TIME !!! LET ME SHOW YOU MY SPECIAL COLLECTIONS !!!"
         msg.send "TODAY's CHOICE IS..."
         arr = ["https://www.dropbox.com/s/iz2eh2s3lnc9rnj/%E5%86%99%E7%9C%9F%202015-04-04%2020%2011%2008.jpg?dl=0", "https://www.dropbox.com/s/px165esedj87ens/%E5%86%99%E7%9C%9F%202015-06-09%208%2052%2022.jpg?dl=0", "https://www.dropbox.com/s/ndh0uuo5n6ql04f/%E5%86%99%E7%9C%9F%202015-07-05%207%2053%2006.jpg?dl=0", "https://www.dropbox.com/s/jstisv07w172i1h/%E5%86%99%E7%9C%9F%202015-07-07%209%2022%2038.jpg?dl=0", "https://www.dropbox.com/s/wk08uood0fpls71/%E5%86%99%E7%9C%9F%202015-08-05%2017%2058%2051.png?dl=0", "https://www.dropbox.com/s/m33hxtv6yjkstwa/%E5%86%99%E7%9C%9F%202015-08-15%2021%2000%2034.jpg?dl=0", "https://www.dropbox.com/s/ugt9uj1saerkudh/%E5%86%99%E7%9C%9F%202015-09-22%2011%2005%2004.jpg?dl=0"]
-        cont = Math.floor(Math.random() * arr.length) + 1
+        cont = Math.floor(Math.random() * arr.length)
         msg.send arr[cont]
 
 # module.exports = (robot) ->
