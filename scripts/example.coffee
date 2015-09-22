@@ -86,9 +86,10 @@ module.exports = (robot) ->
         msg.send "Who watches the WATCHMEN?"
 
     robot.hear /(↑↑↓↓←→←→BA)/, (msg) ->
+        timestamp = (new Date()).toISOString().replace(/[^0-9]/g, "")
         msg.send "BONUS TIME !!! LET ME SHOW YOU MY SPECIAL COLLECTIONS !!!"
         msg.send "TODAY's CHOICE IS..."
-        msg.send "https://www.dropbox.com/s/ugt9uj1saerkudh/%E5%86%99%E7%9C%9F%202015-09-22%2011%2005%2004.jpg?dl=0?#{timestamp}"
+        msg.send "https://www.dropbox.com/s/ugt9uj1saerkudh/%E5%86%99%E7%9C%9F%202015-09-22%2011%2005%2004.jpg?dl=0 #{timestamp}"
         #arr = ["https://www.dropbox.com/s/iz2eh2s3lnc9rnj/%E5%86%99%E7%9C%9F%202015-04-04%2020%2011%2008.jpg?dl=0", "https://www.dropbox.com/s/px165esedj87ens/%E5%86%99%E7%9C%9F%202015-06-09%208%2052%2022.jpg?dl=0", "https://www.dropbox.com/s/ndh0uuo5n6ql04f/%E5%86%99%E7%9C%9F%202015-07-05%207%2053%2006.jpg?dl=0", "https://www.dropbox.com/s/jstisv07w172i1h/%E5%86%99%E7%9C%9F%202015-07-07%209%2022%2038.jpg?dl=0", "https://www.dropbox.com/s/wk08uood0fpls71/%E5%86%99%E7%9C%9F%202015-08-05%2017%2058%2051.png?dl=0", "https://www.dropbox.com/s/m33hxtv6yjkstwa/%E5%86%99%E7%9C%9F%202015-08-15%2021%2000%2034.jpg?dl=0", "https://www.dropbox.com/s/ugt9uj1saerkudh/%E5%86%99%E7%9C%9F%202015-09-22%2011%2005%2004.jpg?dl=0"]
         #cont = Math.floor(Math.random() * arr.length) + 1
         #msg.send "arr[cont]?#{timestamp}"
