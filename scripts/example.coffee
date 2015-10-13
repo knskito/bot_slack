@@ -10,10 +10,28 @@
 
 # refs http://lab.aratana.jp/entry/2014/12/04/185053
 
-
+###
 module.exports = (robot) ->
     robot.hear /(遅刻|遅れます|寝坊|出社|出勤|到着)/, (msg) ->
-        msg.send "しかし、、、毎日毎日毎日毎日、、、disられ続けると、、、さすがに、、、プチ鬱状態になってしまいますな。正直申し上げますと、、、。。。 "
+        arr1 = ["「時間の守れん人間は、何をやってもダメだ。」(田中角栄 1918-1993)",
+                "「何故遅刻をしたのか、芸人として答えてみい。おもろかったら許したる。」(上岡龍太郎 1942-)",
+                "「時間を守れ。挨拶をしろ。これさえ守っていれば食いっぱぐれはないから。」(石原裕次郎 1934-1987)",
+                "「お前が出会う災いは全て、過去にお前がおろそかにした時間の報いだ。」(ナポレオン・ボナパルト 1769-1851)",
+                "「時間を最も有効に利用した者が、最も立派な仕事ができる。」(嘉納治五郎 1860-1938)",
+                "「少年易老學難成 一寸光陰不可輕」(朱子 1130-1200)",
+                "はい。", "おまえ、なんで適当な予定表を出すんだよ、信用出来ない。", "死ぬ気でやれ！"]
+        arr2 = ["https://ja.wikipedia.org/wiki/%E7%94%B0%E4%B8%AD%E8%A7%92%E6%A0%84",
+                "https://ja.wikipedia.org/wiki/%E4%B8%8A%E5%B2%A1%E9%BE%8D%E5%A4%AA%E9%83%8E",
+                "https://ja.wikipedia.org/wiki/%E7%9F%B3%E5%8E%9F%E8%A3%95%E6%AC%A1%E9%83%8E", "https://ja.wikipedia.org/wiki/%E3%83%8A%E3%83%9D%E3%83%AC%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%8A%E3%83%91%E3%83%AB%E3%83%88",
+                "https://ja.wikipedia.org/wiki/%E5%98%89%E7%B4%8D%E6%B2%BB%E4%BA%94%E9%83%8E",
+                "https://ja.wikipedia.org/wiki/%E6%9C%B1%E5%AD%90",
+                "死ぬ気でやれ！",
+                "死ぬ気でやれ！",
+                "死ぬ気でやれ！",
+                "死ぬ気でやれ！",]
+        cont = Math.floor(Math.random() * arr1.length)
+        msg.send arr1[cont]
+        msg.send arr2[cont]
 
     robot.hear /(本日の作業予定)/, (msg) ->
         msg.send "しかし、、、毎日毎日毎日毎日、、、disられ続けると、、、さすがに、、、プチ鬱状態になってしまいますな。正直申し上げますと、、、。。。 "
@@ -39,7 +57,7 @@ module.exports = (robot) ->
         arr = ["https://www.dropbox.com/s/iz2eh2s3lnc9rnj/%E5%86%99%E7%9C%9F%202015-04-04%2020%2011%2008.jpg?dl=0", "https://www.dropbox.com/s/px165esedj87ens/%E5%86%99%E7%9C%9F%202015-06-09%208%2052%2022.jpg?dl=0", "https://www.dropbox.com/s/ndh0uuo5n6ql04f/%E5%86%99%E7%9C%9F%202015-07-05%207%2053%2006.jpg?dl=0", "https://www.dropbox.com/s/jstisv07w172i1h/%E5%86%99%E7%9C%9F%202015-07-07%209%2022%2038.jpg?dl=0", "https://www.dropbox.com/s/wk08uood0fpls71/%E5%86%99%E7%9C%9F%202015-08-05%2017%2058%2051.png?dl=0", "https://www.dropbox.com/s/m33hxtv6yjkstwa/%E5%86%99%E7%9C%9F%202015-08-15%2021%2000%2034.jpg?dl=0", "https://www.dropbox.com/s/ugt9uj1saerkudh/%E5%86%99%E7%9C%9F%202015-09-22%2011%2005%2004.jpg?dl=0"]
         cont = Math.floor(Math.random() * arr.length)
         msg.send arr[cont]
-
+###
 ###
 module.exports = (robot) ->
     robot.hear /(遅刻|遅れます|寝坊|出社|出勤|到着)/, (msg) ->
